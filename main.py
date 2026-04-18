@@ -2,6 +2,10 @@ from fastapi import FastAPI
 import os
 import requests
 app = FastAPI()
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("API_KEY")
 def call_openrouter_api(messages):
