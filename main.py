@@ -1,10 +1,9 @@
 from fastapi import FastAPI
 import os
-
+import requests
 app = FastAPI()
 
 OPENROUTER_API_KEY = os.getenv("API_KEY")
-
 def call_openrouter_api(messages):
     model = "openrouter/free"
     response = requests.post(
